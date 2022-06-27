@@ -1,16 +1,10 @@
 .timeline {
   @apply bg-blue w-full relative;
   height: 1px;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
-.timeline::-webkit-scrollbar {
-  display: none;
 }
 
 .instance {
-  @apply absolute right-12 flex flex-col items-center;
+  @apply absolute right-12 flex flex-col items-center select-none;
 }
 
 .indicator {

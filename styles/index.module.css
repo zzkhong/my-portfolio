@@ -7,14 +7,14 @@
 }
 
 .main h1 {
-  @apply my-8 text-5xl;
+  @apply my-8 text-5xl select-none;
   line-height: 1;
   font-weight: 600;
   letter-spacing: -0.005em;
 }
 
 .main p {
-  @apply text-xl max-w-xl;
+  @apply text-xl max-w-xl select-none;
 }
 
 .name {
@@ -26,7 +26,8 @@
 }
 
 .banner_career {
-  @apply flex flex-col w-screen overflow-scroll justify-center min-h-screen max-w-5xl mx-auto;
+  @apply flex flex-col w-screen overflow-scroll justify-center max-w-5xl mx-auto scrollbar-hide;
+  min-height: 32rem;
 }
 
 .banner_career h1 {

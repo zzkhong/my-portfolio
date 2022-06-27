@@ -12,9 +12,13 @@ import Timeline from "components/Timeline";
 
 import styles from "styles/index.module.css";
 
+import useHorizontalScroll from "hooks/useHorizontalScroll";
+
 import skills from "data/skills";
 
 const Home: NextPage = () => {
+  const scrollRef = useHorizontalScroll();
+
   const titleVariant = {
     visible: {
       opacity: 1,
@@ -36,6 +40,14 @@ const Home: NextPage = () => {
       opacity: 1,
       translateY: 0,
       transition: { duration: 0.5, delay: 0.75 },
+    },
+    hidden: { opacity: 0, translateY: 100 },
+  };
+  const nonDelayUpVariant = {
+    visible: {
+      opacity: 1,
+      translateY: 0,
+      transition: { duration: 0.5, delay: 0.25 },
     },
     hidden: { opacity: 0, translateY: 100 },
   };
@@ -87,17 +99,19 @@ const Home: NextPage = () => {
         </Parallax>
 
         {/* My Career Journey */}
-        <Parallax id="career" speed={10} className={styles.banner_career}>
-          <motion.h1
-            variants={upVariant}
-            initial="hidden"
-            viewport={{ once: true }}
-            whileInView="visible"
-          >
-            My Career Journey
-          </motion.h1>
+        <Parallax speed={10}>
+          <div id="career" ref={scrollRef} className={styles.banner_career}>
+            <motion.h1
+              variants={nonDelayUpVariant}
+              initial="hidden"
+              viewport={{ once: true }}
+              whileInView="visible"
+            >
+              My Career Journey
+            </motion.h1>
 
-          <Timeline />
+            <Timeline />
+          </div>
         </Parallax>
 
         {/* My Portfolio */}
@@ -109,7 +123,7 @@ const Home: NextPage = () => {
           <h1>My Portfolio</h1>
           <motion.div
             className={styles.portfolio}
-            variants={upVariant}
+            variants={nonDelayUpVariant}
             initial="hidden"
             viewport={{ once: true }}
             whileInView="visible"

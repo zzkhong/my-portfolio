@@ -41,11 +41,12 @@ const Timeline: React.FC = () => {
       {experience.map((exp, index) => (
         <div
           key={exp.key}
+          draggable={false}
           className={styles.instance}
           style={{ right: (index + 1) * 250 }}
         >
-          <div className={styles.image}>
-            <Image src={exp.image} alt={exp.title} />
+          <div draggable={false} className={styles.image}>
+            <Image draggable={false} src={exp.image} alt={exp.title} />
           </div>
 
           <div className={styles.indicator} />
