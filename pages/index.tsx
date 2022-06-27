@@ -4,6 +4,7 @@ import moment from "moment";
 import type { NextPage } from "next";
 import { Parallax } from "react-scroll-parallax";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 import Footer from "components/Footer";
 import Bubble from "components/Bubble";
@@ -13,6 +14,8 @@ import Timeline from "components/Timeline";
 import styles from "styles/index.module.css";
 
 import skills from "data/skills";
+
+const LINKEDIN = "https://www.linkedin.com/in/zzkhong";
 
 const Home: NextPage = () => {
   const titleVariant = {
@@ -65,11 +68,29 @@ const Home: NextPage = () => {
           <motion.h1 variants={titleVariant} initial="hidden" animate="visible">
             Hello, I&apos;m <span className={styles.accent}>CK Chin</span>
           </motion.h1>
-          <motion.span
-            variants={rightVariant}
-            initial="hidden"
-            animate="visible"
-          >{`Malaysian, ${moment().year() - 1996} y/o`}</motion.span>
+          <div className={styles.subtitleRow}>
+            <motion.span
+              variants={rightVariant}
+              initial="hidden"
+              animate="visible"
+            >{`Malaysian, ${moment().year() - 1996} y/o`}</motion.span>
+            <motion.a
+              variants={upVariant}
+              initial="hidden"
+              animate="visible"
+              href={LINKEDIN}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.linkedin}
+            >
+              <Image
+                width={24}
+                height={24}
+                src="/linkedin.png"
+                alt="linkedin"
+              />
+            </motion.a>
+          </div>
 
           <motion.p variants={rightVariant} initial="hidden" animate="visible">
             I&apos;m an experienced{" "}

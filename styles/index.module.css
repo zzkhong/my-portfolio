@@ -17,6 +17,14 @@
   @apply text-xl max-w-xl select-none;
 }
 
+.subtitleRow {
+  @apply flex items-center;
+}
+
+.linkedin {
+  @apply animate-bounce ml-4;
+}
+
 .accent {
   @apply transition duration-300 text-blue hover:animate-pulse;
 }
