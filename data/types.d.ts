@@ -11,9 +11,16 @@ interface Experience {
   title: string;
 }
 
+interface Company {
+  key: string;
+  image: any;
+  name: string;
+}
+
 interface Portfolio {
   key: string;
   image: any;
+  description?: string;
   title: string;
   association?: string;
   skills: string[];

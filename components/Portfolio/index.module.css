@@ -1,10 +1,30 @@
 .portfolio {
-  @apply w-24 h-24 rounded-full mx-2 my-2 overflow-hidden shadow-lg
+  @apply w-24 h-24 mx-2 my-2 overflow-hidden shadow-lg
     cursor-pointer hover:opacity-70 hover:animate-wiggle;
 }
 
 .image {
   @apply overflow-hidden bg-gray-200;
+}
+
+.modalTitle {
+  @apply flex flex-row items-center;
+}
+
+.modalTitle h3 {
+  @apply text-2xl;
+}
+
+.modalSkills {
+  @apply flex flex-row flex-wrap;
+}
+
+.modalImage {
+  @apply h-16 w-16 mr-2;
+}
+
+.companyImage {
+  @apply h-8 w-8 rounded-full overflow-hidden;
 }
 
 @screen md {
