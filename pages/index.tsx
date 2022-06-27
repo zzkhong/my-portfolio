@@ -12,13 +12,9 @@ import Timeline from "components/Timeline";
 
 import styles from "styles/index.module.css";
 
-import useHorizontalScroll from "hooks/useHorizontalScroll";
-
 import skills from "data/skills";
 
 const Home: NextPage = () => {
-  const scrollRef = useHorizontalScroll();
-
   const titleVariant = {
     visible: {
       opacity: 1,
@@ -65,9 +61,9 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         {/* Introduction */}
-        <Parallax id="intro" speed={-10} className={styles.banner_intro}>
+        <Parallax id="intro" speed={-7.5} className={styles.banner_intro}>
           <motion.h1 variants={titleVariant} initial="hidden" animate="visible">
-            Hello, I&apos;m <span className={styles.name}>CK Chin</span>
+            Hello, I&apos;m <span className={styles.accent}>CK Chin</span>
           </motion.h1>
           <motion.span
             variants={rightVariant}
@@ -99,25 +95,23 @@ const Home: NextPage = () => {
         </Parallax>
 
         {/* My Career Journey */}
-        <Parallax speed={10}>
-          <div id="career" ref={scrollRef} className={styles.banner_career}>
-            <motion.h1
-              variants={nonDelayUpVariant}
-              initial="hidden"
-              viewport={{ once: true }}
-              whileInView="visible"
-            >
-              My Career Journey
-            </motion.h1>
+        <Parallax id="career" speed={7.5} className={styles.banner_career}>
+          <motion.h1
+            variants={nonDelayUpVariant}
+            initial="hidden"
+            viewport={{ once: true }}
+            whileInView="visible"
+          >
+            My Career
+          </motion.h1>
 
-            <Timeline />
-          </div>
+          <Timeline />
         </Parallax>
 
         {/* My Portfolio */}
         <Parallax
           id="portfolio"
-          speed={-10}
+          speed={-7.5}
           className={styles.banner_portfolio}
         >
           <h1>My Portfolio</h1>

@@ -1,5 +1,5 @@
 .container {
-  @apply px-4 pt-8;
+  @apply pt-8;
 }
 
 .main {
@@ -17,25 +17,24 @@
   @apply text-xl max-w-xl select-none;
 }
 
-.name {
+.accent {
   @apply transition duration-300 text-blue hover:animate-pulse;
 }
 
 .banner_intro {
-  @apply flex flex-col justify-start min-h-screen max-w-5xl mx-auto;
+  @apply px-4 pb-8 flex flex-col justify-start min-h-screen max-w-5xl mx-auto;
 }
 
 .banner_career {
-  @apply flex flex-col w-screen overflow-scroll justify-center max-w-5xl mx-auto scrollbar-hide;
-  min-height: 32rem;
+  @apply flex flex-col w-screen overflow-hidden justify-center mx-auto min-h-screen;
 }
 
 .banner_career h1 {
-  @apply text-black max-w-sm;
+  @apply text-black max-w-sm px-4;
 }
 
 .banner_portfolio {
-  @apply flex flex-col justify-center min-h-screen max-w-5xl mx-auto;
+  @apply px-4 flex flex-col justify-center min-h-screen max-w-5xl mx-auto;
 }
 
 .banner_portfolio h1 {
@@ -52,7 +51,7 @@
 
 @screen md {
   .container {
-    @apply px-12 py-0;
+    @apply py-0;
   }
 
   .main h1 {
@@ -60,11 +59,15 @@
   }
 
   .banner_intro {
-    @apply justify-center;
+    @apply px-12 justify-center;
+  }
+
+  .banner_career h1 {
+    @apply px-12 max-w-5xl w-full mx-auto;
   }
 
   .banner_portfolio {
-    @apply items-start;
+    @apply px-12 items-start;
   }
 
   .portfolio {

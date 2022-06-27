@@ -1,21 +1,49 @@
+.wrapper {
+  @apply flex flex-row items-center relative;
+  min-height: 24rem;
+}
+
 .timeline {
-  @apply bg-blue w-full relative;
+  @apply bg-blue w-screen relative;
   height: 1px;
 }
 
+.container {
+  @apply absolute left-0 right-0 h-full;
+}
+
+.instances {
+  @apply flex flex-row items-center overflow-scroll scrollbar-hide h-full w-full pl-16 mx-auto;
+}
+
 .instance {
-  @apply absolute right-12 flex flex-col items-center select-none;
+  @apply flex flex-col items-center justify-center select-none;
+  min-width: 14rem;
+}
+
+.instance:last-child {
+  @apply mr-16;
+}
+
+@screen md {
+  .instances {
+    @apply pl-40;
+  }
+
+  .instance {
+    min-width: 20rem;
+  }
 }
 
 .indicator {
-  @apply absolute w-4 h-4 bg-blue -top-2 rounded-full animate-ping;
+  @apply w-4 h-4 bg-blue rounded-full animate-ping mb-2;
 }
 
 .image {
-  @apply w-32 h-32 -mt-40 rounded-full overflow-hidden shadow-lg cursor-pointer;
+  @apply w-32 h-32 -mt-28 mb-8 rounded-full overflow-hidden shadow-lg cursor-pointer;
 }
 
 .year {
-  @apply font-bold mt-16;
+  @apply font-bold mt-4;
   letter-spacing: 0.2rem;
 }
