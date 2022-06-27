@@ -1,0 +1,14 @@
+.portfolio {
+  @apply w-24 h-24 rounded-full mx-2 my-2 overflow-hidden shadow-lg
+    cursor-pointer hover:opacity-70 hover:animate-wiggle;
+}
+
+.image {
+  @apply overflow-hidden bg-gray-200;
+}
+
+@screen md {
+  .portfolio {
+    @apply w-32 h-32;
+  }
+}

@@ -1,0 +1,72 @@
+.container {
+  @apply px-4 pt-8;
+}
+
+.main {
+  @apply flex flex-col m-0 min-h-screen;
+}
+
+.main h1 {
+  @apply my-8 text-5xl;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+
+.main p {
+  @apply text-xl max-w-xl;
+}
+
+.name {
+  @apply transition duration-300 text-blue hover:animate-pulse;
+}
+
+.banner_intro {
+  @apply flex flex-col justify-start min-h-screen max-w-5xl mx-auto;
+}
+
+.banner_career {
+  @apply flex flex-col w-screen overflow-scroll justify-center min-h-screen max-w-5xl mx-auto;
+}
+
+.banner_career h1 {
+  @apply text-black max-w-sm;
+}
+
+.banner_portfolio {
+  @apply flex flex-col justify-center min-h-screen max-w-5xl mx-auto;
+}
+
+.banner_portfolio h1 {
+  @apply mb-12;
+}
+
+.skills {
+  @apply flex flex-wrap;
+}
+
+.portfolio {
+  @apply flex flex-wrap justify-center;
+}
+
+@screen md {
+  .container {
+    @apply px-12 py-0;
+  }
+
+  .main h1 {
+    @apply text-6xl;
+  }
+
+  .banner_intro {
+    @apply justify-center;
+  }
+
+  .banner_portfolio {
+    @apply items-start;
+  }
+
+  .portfolio {
+    @apply justify-start;
+  }
+}

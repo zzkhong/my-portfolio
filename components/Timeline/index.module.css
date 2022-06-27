@@ -1,0 +1,27 @@
+.timeline {
+  @apply bg-blue w-full relative;
+  height: 1px;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.timeline::-webkit-scrollbar {
+  display: none;
+}
+
+.instance {
+  @apply absolute right-12 flex flex-col items-center;
+}
+
+.indicator {
+  @apply absolute w-4 h-4 bg-blue -top-2 rounded-full animate-ping;
+}
+
+.image {
+  @apply w-32 h-32 -mt-40 rounded-full overflow-hidden shadow-lg cursor-pointer;
+}
+
+.year {
+  @apply font-bold mt-16;
+  letter-spacing: 0.2rem;
+}

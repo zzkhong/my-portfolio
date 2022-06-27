@@ -1,0 +1,14 @@
+.bubble {
+  @apply rounded-3xl flex items-center justify-center min-w-fit px-4 mb-2 mr-2
+  bg-white shadow-lg cursor-default
+  transition-all duration-100 hover:animate-wiggle hover:bg-slate-100;
+  height: 2.25rem;
+}
+
+.label {
+  @apply text-blue font-semibold;
+}
+
+.icon {
+  @apply mr-1 flex flex-col items-center h-5;
+}
