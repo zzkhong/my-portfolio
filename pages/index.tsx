@@ -11,13 +11,17 @@ import Bubble from "components/Bubble";
 import Portfolio from "components/Portfolio";
 import Timeline from "components/Timeline";
 
-import styles from "styles/index.module.css";
-
+import useWindowDimensions from "hooks/useWindowDimensions";
 import skills from "data/skills";
+
+import styles from "styles/index.module.css";
 
 const LINKEDIN = "https://www.linkedin.com/in/zzkhong";
 
 const Home: NextPage = () => {
+  const { height } = useWindowDimensions();
+  const parallaxSpeed = height && height > 700 ? 15 : 7.5;
+
   const titleVariant = {
     visible: {
       opacity: 1,
@@ -64,7 +68,11 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         {/* Introduction */}
-        <Parallax id="intro" speed={-7.5} className={styles.banner_intro}>
+        <Parallax
+          id="intro"
+          speed={-parallaxSpeed}
+          className={styles.banner_intro}
+        >
           <motion.h1 variants={titleVariant} initial="hidden" animate="visible">
             Hello, I&apos;m <span className={styles.accent}>CK Chin</span>
           </motion.h1>
@@ -116,7 +124,11 @@ const Home: NextPage = () => {
         </Parallax>
 
         {/* My Career Journey */}
-        <Parallax id="career" speed={7.5} className={styles.banner_career}>
+        <Parallax
+          id="career"
+          speed={parallaxSpeed}
+          className={styles.banner_career}
+        >
           <motion.h1
             variants={nonDelayUpVariant}
             initial="hidden"
@@ -132,7 +144,7 @@ const Home: NextPage = () => {
         {/* My Portfolio */}
         <Parallax
           id="portfolio"
-          speed={-7.5}
+          speed={-parallaxSpeed}
           className={styles.banner_portfolio}
         >
           <h1>My Portfolio</h1>
