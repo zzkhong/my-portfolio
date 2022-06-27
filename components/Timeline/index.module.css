@@ -35,6 +35,24 @@
   }
 }
 
+@screen lg {
+  .instances {
+    @apply pl-60;
+  }
+}
+
+@screen xl {
+  .instances {
+    @apply pl-72;
+  }
+}
+
+@screen 2xl {
+  .instances {
+    padding-left: 48rem;
+  }
+}
+
 .indicator {
   @apply w-4 h-4 bg-blue rounded-full animate-ping mb-2;
 }

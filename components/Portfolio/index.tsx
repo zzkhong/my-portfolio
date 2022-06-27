@@ -19,6 +19,7 @@ import Bubble from "components/Bubble";
 
 const Portfolio: React.FC = () => {
   const [current, setCurrent] = React.useState<Portfolio>();
+  const [open, setOpen] = React.useState(false);
 
   const portfolio: Portfolio[] = [
     {
@@ -116,11 +117,23 @@ const Portfolio: React.FC = () => {
     return skills.filter((skill) => current?.skills.includes(skill.key));
   }, [current]);
 
+  const handleOpen = React.useCallback(
+    (selected: Portfolio) => {
+      setCurrent(selected);
+      setOpen(true);
+    },
+    [setCurrent, setOpen]
+  );
+
+  const handleClose = React.useCallback(() => {
+    setOpen(false);
+  }, [setOpen]);
+
   return (
     <>
       <Modal
-        opened={current !== undefined}
-        onClose={() => setCurrent(undefined)}
+        opened={open}
+        onClose={handleClose}
         centered
         withCloseButton={false}
       >
@@ -169,7 +182,7 @@ const Portfolio: React.FC = () => {
           <a
             key={data.key}
             className={styles.portfolio}
-            onClick={() => setCurrent(data)}
+            onClick={() => handleOpen(data)}
           >
             <div className={styles.image}>
               <Image src={data.image} alt={data.title} />
