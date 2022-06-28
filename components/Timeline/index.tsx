@@ -13,8 +13,7 @@ import useDraggableScroll from "hooks/useDraggable";
 import styles from "./index.module.css";
 
 const Timeline: React.FC = () => {
-  // const scrollRef = useHorizontalScroll();
-  const scrollRef = React.createRef();
+  const scrollRef = React.createRef<any>();
   const { onMouseDown } = useDraggableScroll(scrollRef, {
     direction: "horizontal",
   });
