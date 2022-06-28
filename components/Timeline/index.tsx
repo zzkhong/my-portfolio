@@ -8,12 +8,16 @@ import upstack from "assets/experience/upstack.png";
 import paywatch from "assets/experience/paywatch.png";
 import paywatch2 from "assets/experience/paywatch2.png";
 
-import useHorizontalScroll from "hooks/useHorizontalScroll";
+import useDraggableScroll from "hooks/useDraggable";
 
 import styles from "./index.module.css";
 
 const Timeline: React.FC = () => {
-  const scrollRef = useHorizontalScroll();
+  // const scrollRef = useHorizontalScroll();
+  const scrollRef = React.createRef();
+  const { onMouseDown } = useDraggableScroll(scrollRef, {
+    direction: "horizontal",
+  });
 
   const experience: Experience[] = [
     {
@@ -59,7 +63,11 @@ const Timeline: React.FC = () => {
       <div className={styles.timeline} />
 
       <div className={styles.container}>
-        <div ref={scrollRef} className={styles.instances}>
+        <div
+          ref={scrollRef}
+          onMouseDown={onMouseDown}
+          className={styles.instances}
+        >
           {experience.map((exp, index) => (
             <div
               key={exp.key}
