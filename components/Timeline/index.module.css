@@ -61,7 +61,11 @@
 
 @screen 2xl {
   .instances {
-    padding-left: 48rem;
+    padding-left: 30%;
+  }
+
+  .instance:last-child {
+    margin-right: 30%;
   }
 }
 
