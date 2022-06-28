@@ -30,6 +30,10 @@
     @apply pl-40;
   }
 
+  .instance:last-child {
+    @apply mr-40;
+  }
+
   .instance {
     min-width: 20rem;
   }
@@ -39,11 +43,19 @@
   .instances {
     @apply pl-60;
   }
+
+  .instance:last-child {
+    @apply mr-60;
+  }
 }
 
 @screen xl {
   .instances {
     @apply pl-72;
+  }
+
+  .instance:last-child {
+    @apply mr-72;
   }
 }
 

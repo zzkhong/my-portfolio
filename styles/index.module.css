@@ -34,7 +34,7 @@
 }
 
 .banner_career {
-  @apply flex flex-col w-screen overflow-hidden justify-center mx-auto min-h-screen;
+  @apply flex flex-col w-full overflow-hidden justify-center mx-auto min-h-screen;
 }
 
 .banner_career h1 {
