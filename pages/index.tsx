@@ -61,7 +61,7 @@ const Home: NextPage = () => {
         <title>CK Chin&apos;s Portfolio</title>
         <meta
           name="description"
-          content="CK Chin is a Full Stack Developer at Paywatch, specialize in React, React Native and FE Development."
+          content="CK Chin is a Full Stack Developer working at Paywatch(Fintech Sector), specialize in React, React Native and FE Development."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -105,7 +105,7 @@ const Home: NextPage = () => {
             <b>
               <u>Full Stack developer</u>
             </b>{" "}
-            currently working at <b>Paywatch</b>, specialize in{" "}
+            currently working in <b>Paywatch (Fintech Sector)</b>, specialize in{" "}
             <b>Mobile Development</b> and <b>Web Development</b>.
           </motion.p>
 
