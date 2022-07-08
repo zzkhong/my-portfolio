@@ -1,6 +1,5 @@
 import React from "react";
 import Head from "next/head";
-import moment from "moment";
 import type { NextPage } from "next";
 import { Parallax } from "react-scroll-parallax";
 import { motion } from "framer-motion";
@@ -61,7 +60,7 @@ const Home: NextPage = () => {
         <title>CK Chin&apos;s Portfolio</title>
         <meta
           name="description"
-          content="CK Chin is a Full Stack Developer working at Paywatch(Fintech Sector), specialize in React, React Native and FE Development."
+          content="CK Chin is a Full Stack Developer working at Paywatch, specialize in React, React Native and FE Development."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -81,7 +80,7 @@ const Home: NextPage = () => {
               variants={rightVariant}
               initial="hidden"
               animate="visible"
-            >{`Malaysian, ${moment().year() - 1996} y/o`}</motion.span>
+            >{`Malaysian, ${new Date().getFullYear() - 1996} y/o`}</motion.span>
             <motion.a
               variants={upVariant}
               initial="hidden"
@@ -105,7 +104,7 @@ const Home: NextPage = () => {
             <b>
               <u>Full Stack developer</u>
             </b>{" "}
-            currently working in <b>Paywatch (Fintech Sector)</b>, specialize in{" "}
+            currently working in <b>Paywatch</b>, specialize in{" "}
             <b>Mobile Development</b> and <b>Web Development</b>.
           </motion.p>
 
