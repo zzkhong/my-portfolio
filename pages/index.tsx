@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import type { NextPage } from "next";
 import { Parallax } from "react-scroll-parallax";
-import { motion } from "framer-motion";
+import { LazyMotion, domAnimation, m } from "framer-motion";
 import Image from "next/image";
 
 import Footer from "components/Footer";
@@ -65,99 +65,101 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        {/* Introduction */}
-        <Parallax
-          id="intro"
-          speed={-parallaxSpeed}
-          className={styles.banner_intro}
-        >
-          <motion.h1 variants={titleVariant} initial="hidden" animate="visible">
-            Hello, I&apos;m <span className={styles.accent}>CK Chin</span>
-          </motion.h1>
-          <div className={styles.subtitleRow}>
-            <motion.span
-              variants={rightVariant}
-              initial="hidden"
-              animate="visible"
-            >{`Malaysian, ${new Date().getFullYear() - 1996} y/o`}</motion.span>
-            <motion.a
-              variants={upVariant}
-              initial="hidden"
-              animate="visible"
-              href={LINKEDIN}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.linkedin}
-            >
-              <Image
-                width={24}
-                height={24}
-                src="/linkedin.webp"
-                alt="linkedin"
-              />
-            </motion.a>
-          </div>
-
-          <motion.p variants={rightVariant} initial="hidden" animate="visible">
-            I&apos;m an experienced{" "}
-            <b>
-              <u>Full Stack developer</u>
-            </b>{" "}
-            currently working in <b>Paywatch</b>, specialize in{" "}
-            <b>Mobile Development</b> and <b>Web Development</b>.
-          </motion.p>
-
-          <motion.div variants={upVariant} initial="hidden" animate="visible">
-            <h2>Skills</h2>
-            <div className={styles.skills}>
-              {skills.map((skill) => (
-                <Bubble
-                  key={skill.label}
-                  icon={skill.icon}
-                  label={skill.label}
+      <LazyMotion features={domAnimation}>
+        <main className={styles.main}>
+          {/* Introduction */}
+          <Parallax
+            id="intro"
+            speed={-parallaxSpeed}
+            className={styles.banner_intro}
+          >
+            <m.h1 variants={titleVariant} initial="hidden" animate="visible">
+              Hello, I&apos;m <span className={styles.accent}>CK Chin</span>
+            </m.h1>
+            <div className={styles.subtitleRow}>
+              <m.span
+                variants={rightVariant}
+                initial="hidden"
+                animate="visible"
+              >{`Malaysian, ${new Date().getFullYear() - 1996} y/o`}</m.span>
+              <m.a
+                variants={upVariant}
+                initial="hidden"
+                animate="visible"
+                href={LINKEDIN}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.linkedin}
+              >
+                <Image
+                  width={24}
+                  height={24}
+                  src="/linkedin.webp"
+                  alt="linkedin"
                 />
-              ))}
+              </m.a>
             </div>
-          </motion.div>
-        </Parallax>
 
-        {/* My Career Journey */}
-        <Parallax
-          id="career"
-          speed={parallaxSpeed}
-          className={styles.banner_career}
-        >
-          <motion.h1
-            variants={nonDelayUpVariant}
-            initial="hidden"
-            viewport={{ once: true }}
-            whileInView="visible"
+            <m.p variants={rightVariant} initial="hidden" animate="visible">
+              I&apos;m an experienced{" "}
+              <b>
+                <u>Full Stack developer</u>
+              </b>{" "}
+              currently working in <b>Paywatch</b>, specialize in{" "}
+              <b>Mobile Development</b> and <b>Web Development</b>.
+            </m.p>
+
+            <m.div variants={upVariant} initial="hidden" animate="visible">
+              <h2>Skills</h2>
+              <div className={styles.skills}>
+                {skills.map((skill) => (
+                  <Bubble
+                    key={skill.label}
+                    icon={skill.icon}
+                    label={skill.label}
+                  />
+                ))}
+              </div>
+            </m.div>
+          </Parallax>
+
+          {/* My Career Journey */}
+          <Parallax
+            id="career"
+            speed={parallaxSpeed}
+            className={styles.banner_career}
           >
-            My Career
-          </motion.h1>
+            <m.h1
+              variants={nonDelayUpVariant}
+              initial="hidden"
+              viewport={{ once: true }}
+              whileInView="visible"
+            >
+              My Career
+            </m.h1>
 
-          <Timeline />
-        </Parallax>
+            <Timeline />
+          </Parallax>
 
-        {/* My Portfolio */}
-        <Parallax
-          id="portfolio"
-          speed={-parallaxSpeed}
-          className={styles.banner_portfolio}
-        >
-          <h1>My Portfolio</h1>
-          <motion.div
-            className={styles.portfolio}
-            variants={nonDelayUpVariant}
-            initial="hidden"
-            viewport={{ once: true }}
-            whileInView="visible"
+          {/* My Portfolio */}
+          <Parallax
+            id="portfolio"
+            speed={-parallaxSpeed}
+            className={styles.banner_portfolio}
           >
-            <Portfolio />
-          </motion.div>
-        </Parallax>
-      </main>
+            <h1>My Portfolio</h1>
+            <m.div
+              className={styles.portfolio}
+              variants={nonDelayUpVariant}
+              initial="hidden"
+              viewport={{ once: true }}
+              whileInView="visible"
+            >
+              <Portfolio />
+            </m.div>
+          </Parallax>
+        </main>
+      </LazyMotion>
 
       <Footer />
     </div>
