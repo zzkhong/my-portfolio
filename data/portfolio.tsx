@@ -35,7 +35,7 @@ const portfolio: Portfolio[] = [
   },
   {
     key: "daikin",
-    image: "/portfolio/daikin.png",
+    image: "/portfolio/daikin.webp",
     description: "IoT solution for air-conditioning in mobile app",
     title: "GO Daikin",
     association: "upstack",
@@ -44,7 +44,7 @@ const portfolio: Portfolio[] = [
   },
   {
     key: "acson",
-    image: "/portfolio/acson.png",
+    image: "/portfolio/acson.webp",
     description: "IoT solution for air-conditioning in mobile app",
     title: "MY Acson",
     association: "upstack",
@@ -53,7 +53,7 @@ const portfolio: Portfolio[] = [
   },
   {
     key: "6jars",
-    image: "/portfolio/6jars.png",
+    image: "/portfolio/6jars.webp",
     description:
       "Self project, budgeting mobile app which try to auto record recurring expenses",
     title: "6Jars - Smart Budgeting APP",
@@ -62,7 +62,7 @@ const portfolio: Portfolio[] = [
   },
   {
     key: "peridott",
-    image: "/portfolio/peridott.png",
+    image: "/portfolio/peridott.webp",
     description:
       "Freelance project, CMS system used to manage dynamic content on existing static website",
     title: "Peridott Beyond CMS",
@@ -71,7 +71,7 @@ const portfolio: Portfolio[] = [
   },
   {
     key: "freeview",
-    image: "/portfolio/freeview.png",
+    image: "/portfolio/freeview.webp",
     description: "UK Broadcasting platform on SONY Linux TV",
     title: "SONY Linux FreeView",
     association: "sony",
@@ -80,7 +80,7 @@ const portfolio: Portfolio[] = [
   },
   {
     key: "attendink",
-    image: "/portfolio/attendink.png",
+    image: "/portfolio/attendink.webp",
     description:
       "Intern project, attendance taking native android mobile application",
     title: "AttendInk",

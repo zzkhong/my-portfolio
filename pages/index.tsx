@@ -94,7 +94,7 @@ const Home: NextPage = () => {
               <Image
                 width={24}
                 height={24}
-                src="/linkedin.png"
+                src="/linkedin.webp"
                 alt="linkedin"
               />
             </motion.a>

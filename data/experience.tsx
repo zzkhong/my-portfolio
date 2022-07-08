@@ -1,7 +1,7 @@
 const experience: Experience[] = [
   {
     key: "werebits",
-    image: "/experience/werebits.png",
+    image: "/experience/werebits.webp",
     year: "2017",
     title: "Intern at Werebits",
   },
@@ -13,13 +13,13 @@ const experience: Experience[] = [
   },
   {
     key: "sony",
-    image: "/experience/sony.png",
+    image: "/experience/sony.webp",
     year: "2019",
     title: "Android TV Development",
   },
   {
     key: "upstack",
-    image: "/experience/upstack.png",
+    image: "/experience/upstack.webp",
     year: "2020",
     title: "React/React Native Developer at Upstack Studio",
   },
@@ -31,7 +31,7 @@ const experience: Experience[] = [
   },
   {
     key: "paywatch",
-    image: "/experience/paywatch.png",
+    image: "/experience/paywatch.webp",
     year: "2022",
     title: "Full-Stack Engineer at Paywatch",
   },

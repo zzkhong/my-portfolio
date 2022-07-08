@@ -1,7 +1,7 @@
 const companies: Record<string, Company> = {
   werebits: {
     key: "werebits",
-    image: "/company/werebits.png",
+    image: "/company/werebits.webp",
     name: "Werebits",
   },
   sony: {
@@ -11,7 +11,7 @@ const companies: Record<string, Company> = {
   },
   upstack: {
     key: "upstack",
-    image: "/company/upstack.png",
+    image: "/company/upstack.webp",
     name: "Upstack Studio",
   },
   paywatch: {
