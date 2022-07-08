@@ -2,15 +2,6 @@ import React from "react";
 import Image from "next/image";
 import { Button, Modal } from "@mantine/core";
 
-import me from "assets/portfolio/me.png";
-import paywatch from "assets/portfolio/paywatch.png";
-import daikin from "assets/portfolio/daikin.png";
-import acson from "assets/portfolio/acson.png";
-import sixjars from "assets/portfolio/6jars.png";
-import peridott from "assets/portfolio/peridott.png";
-import freeview from "assets/portfolio/freeview.png";
-import attendink from "assets/portfolio/attendink.png";
-
 import companies from "data/companies";
 import skills from "data/skills";
 
@@ -24,7 +15,8 @@ const Portfolio: React.FC = () => {
   const portfolio: Portfolio[] = [
     {
       key: "portfolio",
-      image: me,
+      image: "/portfolio/paywatch.png",
+      // image: "/portfolio/me.webp",
       description: "My Portfolio, the current website you looking at",
       title: "My Porfolio",
       skills: ["nextjs", "tailwind", "typescript"],
@@ -39,7 +31,7 @@ const Portfolio: React.FC = () => {
     // },
     {
       key: "paywatchweb",
-      image: paywatch,
+      image: "/portfolio/paywatch.png",
       description:
         "The website for introducing and promoting the Earned Waged Access solution",
       title: "Paywatch Global Webpage",
@@ -49,7 +41,7 @@ const Portfolio: React.FC = () => {
     },
     {
       key: "paywatchapp",
-      image: paywatch,
+      image: "/portfolio/paywatch.png",
       description: "Providing the Earned Waged Access solution in mobile app",
       title: "Paywatch APP",
       association: "paywatch",
@@ -58,7 +50,7 @@ const Portfolio: React.FC = () => {
     },
     {
       key: "daikin",
-      image: daikin,
+      image: "/portfolio/daikin.png",
       description: "IoT solution for air-conditioning in mobile app",
       title: "GO Daikin",
       association: "upstack",
@@ -67,7 +59,7 @@ const Portfolio: React.FC = () => {
     },
     {
       key: "acson",
-      image: acson,
+      image: "/portfolio/acson.png",
       description: "IoT solution for air-conditioning in mobile app",
       title: "MY Acson",
       association: "upstack",
@@ -76,7 +68,7 @@ const Portfolio: React.FC = () => {
     },
     {
       key: "6jars",
-      image: sixjars,
+      image: "/portfolio/6jars.png",
       description:
         "Self project, budgeting mobile app which try to auto record recurring expenses",
       title: "6Jars - Smart Budgeting APP",
@@ -85,7 +77,7 @@ const Portfolio: React.FC = () => {
     },
     {
       key: "peridott",
-      image: peridott,
+      image: "/portfolio/peridott.png",
       description:
         "Freelance project, CMS system used to manage dynamic content on existing static website",
       title: "Peridott Beyond CMS",
@@ -94,7 +86,7 @@ const Portfolio: React.FC = () => {
     },
     {
       key: "freeview",
-      image: freeview,
+      image: "/portfolio/freeview.png",
       description: "UK Broadcasting platform on SONY Linux TV",
       title: "SONY Linux FreeView",
       association: "sony",
@@ -103,7 +95,7 @@ const Portfolio: React.FC = () => {
     },
     {
       key: "attendink",
-      image: attendink,
+      image: "/portfolio/attendink.png",
       description:
         "Intern project, attendance taking native android mobile application",
       title: "AttendInk",
@@ -140,7 +132,7 @@ const Portfolio: React.FC = () => {
         <div className={styles.modalTitle}>
           {current?.image && (
             <div className={styles.modalImage}>
-              <Image src={current.image} alt="" />
+              <Image layout="fill" src={current.image} alt="" />
             </div>
           )}
           <h3>{current?.title}</h3>
@@ -185,7 +177,7 @@ const Portfolio: React.FC = () => {
             onClick={() => handleOpen(data)}
           >
             <div className={styles.image}>
-              <Image src={data.image} alt={data.title} />
+              <Image layout="fill" src={data.image} alt={data.title} />
             </div>
           </a>
         ))}

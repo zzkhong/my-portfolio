@@ -1,5 +1,5 @@
 .portfolio {
-  @apply w-24 h-24 mx-2 my-2 overflow-hidden shadow-lg
+  @apply w-24 h-24 mx-2 my-2 overflow-hidden shadow-lg relative
     cursor-pointer hover:opacity-70 hover:animate-wiggle;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .modalImage {
-  @apply h-16 w-16 mr-2;
+  @apply h-16 w-16 mr-2 relative;
 }
 
 .companyImage {
