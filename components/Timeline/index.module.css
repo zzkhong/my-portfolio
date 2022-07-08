@@ -74,7 +74,7 @@
 }
 
 .image {
-  @apply w-32 h-32 -mt-28 mb-8 rounded-full overflow-hidden shadow-lg cursor-pointer;
+  @apply w-32 h-32 -mt-28 mb-8 rounded-full overflow-hidden shadow-lg cursor-pointer relative;
 }
 
 .year {
