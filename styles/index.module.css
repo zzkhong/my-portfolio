@@ -21,7 +21,7 @@
   @apply flex items-center;
 }
 
-.linkedin {
+.feed {
   @apply animate-bounce ml-4;
 }
 

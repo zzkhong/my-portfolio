@@ -16,6 +16,7 @@ import skills from "data/skills";
 import styles from "styles/index.module.css";
 
 const LINKEDIN = "https://www.linkedin.com/in/zzkhong";
+const HACKATHON = "https://lkcfes.utar.edu.my/utar-students-garner-multiple-prizes-at-hack2hire-software-hackathon/";
 
 const Home: NextPage = () => {
   const { height } = useWindowDimensions();
@@ -82,6 +83,8 @@ const Home: NextPage = () => {
                 initial="hidden"
                 animate="visible"
               >{`Malaysian, ${new Date().getFullYear() - 1996} y/o`}</m.span>
+
+              {/* FEED */}
               <m.a
                 variants={upVariant}
                 initial="hidden"
@@ -89,7 +92,7 @@ const Home: NextPage = () => {
                 href={LINKEDIN}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={styles.linkedin}
+                className={styles.feed}
               >
                 <Image
                   width={24}
@@ -98,6 +101,24 @@ const Home: NextPage = () => {
                   alt="linkedin"
                 />
               </m.a>
+              <m.a
+                variants={upVariant}
+                initial="hidden"
+                animate="visible"
+                href={HACKATHON}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.feed}
+              >
+                <Image
+                  width={24}
+                  height={24}
+                  src="/rssfeed.webp"
+                  alt="rssfeed"
+                />
+              </m.a>
+              {/* FEED */}
+
             </div>
 
             <m.p variants={rightVariant} initial="hidden" animate="visible">

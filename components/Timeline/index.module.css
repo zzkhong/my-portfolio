@@ -71,12 +71,22 @@
   }
 }
 
+.position {
+  @apply -mb-4 flex flex-col items-center justify-center;
+}
+
 .indicator {
   @apply w-4 h-4 bg-blue rounded-full animate-ping mb-2;
 }
 
 .image {
-  @apply w-32 h-32 -mt-28 mb-8 rounded-full overflow-hidden shadow-lg cursor-pointer relative;
+  @apply w-32 h-32 mb-10 rounded-full overflow-hidden shadow-lg cursor-pointer relative;
+}
+
+.title {
+  @apply text-lg font-semibold text-center mt-2;
+  max-width: 12rem;
+  height: 8rem;
 }
 
 .year {

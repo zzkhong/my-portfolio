@@ -39,8 +39,14 @@ const Timeline: React.FC = () => {
                 />
               </div>
 
-              <div className={styles.indicator} />
-              <span className={styles.year}>{exp.year}</span>
+              <div className={styles.position} draggable={false}>
+                <div draggable={false} className={styles.indicator} />
+                <span className={styles.year}>{exp.year}</span>
+
+                <span className={styles.title}>
+                  {exp.title}
+                </span>
+              </div>
             </div>
           ))}
         </div>
