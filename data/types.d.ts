@@ -24,5 +24,5 @@ interface Portfolio {
   title: string;
   association?: string;
   skills: string[];
-  link: string;
+  link?: string;
 }

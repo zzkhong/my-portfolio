@@ -19,6 +19,8 @@
 .instance {
   @apply flex flex-col items-center justify-center select-none;
   min-width: 14rem;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .instance:last-child {

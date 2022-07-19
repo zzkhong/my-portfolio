@@ -71,6 +71,8 @@ const Portfolio: React.FC = () => {
         <br />
 
         <Button
+          disabled={current?.link === undefined}
+          className={current?.link === undefined ? styles.disabled : ''}
           fullWidth
           component="a"
           target="_blank"

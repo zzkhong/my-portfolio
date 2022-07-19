@@ -5,7 +5,7 @@ const portfolio: Portfolio[] = [
     description: "My Portfolio, the current website you looking at",
     title: "My Porfolio",
     skills: ["nextjs", "tailwind", "typescript"],
-    link: "",
+    link: undefined,
   },
   // {
   //   key: "onezoapp",
