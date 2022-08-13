@@ -7,14 +7,14 @@
 }
 
 .main h1 {
-  @apply my-8 text-5xl select-none;
+  @apply my-8 text-4xl select-none;
   line-height: 1;
   font-weight: 600;
   letter-spacing: -0.005em;
 }
 
 .main p {
-  @apply text-xl max-w-xl select-none;
+  @apply text-lg max-w-xl select-none;
 }
 
 .subtitleRow {
@@ -64,6 +64,14 @@
 
   .main h1 {
     @apply text-6xl;
+  }
+
+  .main h1 {
+    @apply text-5xl;
+  }
+  
+  .main p {
+    @apply text-xl;
   }
 
   .banner_intro {
