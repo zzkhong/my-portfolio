@@ -16,7 +16,8 @@ import skills from "data/skills";
 import styles from "styles/index.module.css";
 
 const LINKEDIN = "https://www.linkedin.com/in/zzkhong";
-const HACKATHON = "https://lkcfes.utar.edu.my/utar-students-garner-multiple-prizes-at-hack2hire-software-hackathon/";
+const HACKATHON =
+  "https://lkcfes.utar.edu.my/utar-students-garner-multiple-prizes-at-hack2hire-software-hackathon/";
 
 const Home: NextPage = () => {
   const { height } = useWindowDimensions();
@@ -118,7 +119,6 @@ const Home: NextPage = () => {
                 />
               </m.a>
               {/* FEED */}
-
             </div>
 
             <m.p variants={rightVariant} initial="hidden" animate="visible">
@@ -129,6 +129,16 @@ const Home: NextPage = () => {
               currently working in <b>Paywatch</b>, specialize in{" "}
               <b>Mobile Development</b> and <b>Web Development</b>.
             </m.p>
+
+            <m.a
+              variants={rightVariant}
+              initial="hidden"
+              animate="visible"
+              target="_blank"
+              href="/resume/resume.pdf"
+            >
+              Download My Resume here
+            </m.a>
 
             <m.div variants={upVariant} initial="hidden" animate="visible">
               <h2>Skills</h2>
