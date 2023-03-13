@@ -41,7 +41,7 @@ const Portfolio: React.FC = () => {
       >
         <div className={styles.modalTitle}>
           {current?.image && (
-            <div className={styles.modalImage}>
+            <div className={styles.modalContent}>
               <Image layout="fill" src={current.image} alt="" />
             </div>
           )}
@@ -89,7 +89,7 @@ const Portfolio: React.FC = () => {
         </Button>
       </Modal>
 
-      <>
+      <div className={styles.container}>
         {portfolio.map((data) => (
           <a
             key={data.key}
@@ -101,7 +101,7 @@ const Portfolio: React.FC = () => {
             </div>
           </a>
         ))}
-      </>
+      </div>
     </>
   );
 };

@@ -46,7 +46,7 @@
 }
 
 .banner_portfolio {
-  @apply px-4 flex flex-col justify-center min-h-screen max-w-5xl mx-auto;
+  @apply flex flex-col justify-center min-h-screen max-w-5xl mx-auto;
 }
 
 .banner_portfolio h1 {

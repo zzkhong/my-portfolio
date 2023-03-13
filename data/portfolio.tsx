@@ -20,7 +20,7 @@ const portfolio: Portfolio[] = [
     image: "/portfolio/paywatch.png",
     description:
       "The promotional website for introducing and promoting the Earned Waged Access solution",
-    title: "Paywatch Global Webpage",
+    title: "Paywatch Webpage",
     association: "paywatch",
     skills: ["gatsby", "tailwind", "javascript"],
     link: "https://www.paywatchglobal.com/",
@@ -57,7 +57,7 @@ const portfolio: Portfolio[] = [
     image: "/portfolio/6jars.webp",
     description:
       "Self project, budgeting mobile app which try to auto record recurring expenses",
-    title: "6Jars - Smart Budgeting APP",
+    title: "6Jars",
     skills: ["reactnative", "circleci", "javascript"],
     link: "https://play.google.com/store/apps/details?id=com.zzkhong.sixjars",
   },

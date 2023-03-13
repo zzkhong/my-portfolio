@@ -1,5 +1,9 @@
+.container {
+  @apply pb-12 grid grid-cols-2 gap-4;
+}
+
 .portfolio {
-  @apply w-24 h-24 mx-2 my-2 overflow-hidden shadow-lg relative
+  @apply w-24 h-24 overflow-hidden shadow-lg relative
     cursor-pointer hover:opacity-70 hover:animate-wiggle;
 }
 
@@ -12,24 +16,48 @@
 }
 
 .modalTitle h3 {
-  @apply text-2xl;
+  @apply text-xl mb-0;
 }
 
 .modalSkills {
   @apply flex flex-row mt-2 flex-wrap;
 }
 
-.modalImage {
-  @apply h-16 w-16 mr-2 relative;
+.modalContent {
+  @apply hidden h-14 w-14 relative;
 }
 
 .companyImage {
   @apply h-8 w-8 relative rounded-full overflow-hidden;
 }
 
+@screen xs {
+  .container {
+    @apply grid-cols-3;
+  }
+
+  .modalTitle h3 {
+    @apply pl-2 my-auto;
+  }
+
+  .modalContent {
+    @apply flex;
+  }
+}
+
 @screen md {
+  .container {
+    @apply grid-cols-4;
+  }
+
   .portfolio {
     @apply w-32 h-32;
+  }
+}
+
+@screen lg {
+  .container {
+    @apply grid-cols-5;
   }
 }
 
