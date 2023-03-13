@@ -5,10 +5,11 @@ interface Skill {
 }
 
 interface Experience {
-  key: string;
-  image: any;
-  year: string;
+  period: string;
   title: string;
+  company: string;
+  link: string;
+  achievement: string[];
 }
 
 interface Company {

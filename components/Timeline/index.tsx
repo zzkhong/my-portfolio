@@ -1,57 +1,72 @@
 import React from "react";
 import Image from "next/image";
-
-import useDraggableScroll from "hooks/useDraggable";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+import { List } from "@mantine/core";
 
 import experience from "data/experience";
+import companies from "data/companies";
 
+import colors from "utils/colors";
 import styles from "./index.module.css";
 
+const jsStyles = {
+  instance: {
+    background: colors.GREY_600,
+    color: colors.WHITE,
+  },
+  instanceFirst: {
+    background: colors.BLUE,
+    color: colors.WHITE,
+  },
+  arrow: {
+    borderRight: `7px solid ${colors.GREY_600}`,
+  },
+  arrowFirst: {
+    borderRight: `7px solid ${colors.BLUE}`,
+  },
+};
+
 const Timeline: React.FC = () => {
-  const scrollRef = React.createRef<any>();
-  const { onMouseDown } = useDraggableScroll(scrollRef, {
-    direction: "horizontal",
-  });
-
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.timeline} />
-
-      <div className={styles.container}>
-        <div
-          ref={scrollRef}
-          onMouseDown={onMouseDown}
-          className={styles.instances}
+    <VerticalTimeline lineColor={colors.BLUE}>
+      {experience.map((data, i) => (
+        <VerticalTimelineElement
+          key={data.company}
+          iconOnClick={() => window.open(data.link)}
+          contentStyle={i === 0 ? jsStyles.instanceFirst : jsStyles.instance}
+          contentArrowStyle={i === 0 ? jsStyles.arrowFirst : jsStyles.arrow}
+          className="vertical-timeline-element--work"
+          iconClassName={styles.icon}
+          date={data.period}
+          dateClassName={styles.date}
+          icon={
+            <Image
+              layout="fill"
+              className={styles.logo}
+              src={companies[data.company].image}
+              alt={data.company}
+            />
+          }
         >
-          {experience.map((exp, index) => (
-            <div
-              key={exp.key}
-              draggable={false}
-              className={styles.instance}
-              style={{ right: (index + 1) * 300 }}
-            >
-              <div draggable={false} className={styles.image}>
-                <Image
-                  layout="fill"
-                  draggable={false}
-                  src={exp.image}
-                  alt={exp.title}
-                />
-              </div>
+          <div className={styles.header}>
+            <span className={styles.title}>{data.title}</span>,
+            <span className={styles.company}>
+              {companies[data.company].name}
+            </span>
+          </div>
 
-              <div className={styles.position} draggable={false}>
-                <div draggable={false} className={styles.indicator} />
-                <span className={styles.year}>{exp.year}</span>
-
-                <span className={styles.title}>
-                  {exp.title}
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
+          <List className={styles.list} spacing="sm">
+            {data.achievement.map((item) => (
+              <List.Item className={styles.listItem}>{item}</List.Item>
+            ))}
+          </List>
+        </VerticalTimelineElement>
+      ))}
+    </VerticalTimeline>
   );
 };
 

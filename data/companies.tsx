@@ -7,7 +7,7 @@ const companies: Record<string, Company> = {
   sony: {
     key: "sony",
     image: "/company/sony.png",
-    name: "SONY",
+    name: "SONY EMCS",
   },
   upstack: {
     key: "upstack",
@@ -17,7 +17,12 @@ const companies: Record<string, Company> = {
   paywatch: {
     key: "paywatch",
     image: "/company/paywatch.png",
-    name: "Paywatch",
+    name: "Paywatch Malaysia",
+  },
+  binance: {
+    key: "binance",
+    image: "/company/binance.png",
+    name: "Binance",
   },
 };
 

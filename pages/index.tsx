@@ -12,12 +12,9 @@ import Timeline from "components/Timeline";
 
 import useWindowDimensions from "hooks/useWindowDimensions";
 import skills from "data/skills";
+import { HACKATHON, LINKEDIN } from "data/links";
 
 import styles from "styles/index.module.css";
-
-const LINKEDIN = "https://www.linkedin.com/in/zzkhong";
-const HACKATHON =
-  "https://lkcfes.utar.edu.my/utar-students-garner-multiple-prizes-at-hack2hire-software-hackathon/";
 
 const Home: NextPage = () => {
   const { height } = useWindowDimensions();
@@ -143,11 +140,11 @@ const Home: NextPage = () => {
             <m.div variants={upVariant} initial="hidden" animate="visible">
               <h2>Skills</h2>
               <div className={styles.skills}>
-                {skills.map((skill) => (
+                {Object.keys(skills).map((skill: any) => (
                   <Bubble
-                    key={skill.label}
-                    icon={skill.icon}
-                    label={skill.label}
+                    key={skills[skill].label}
+                    icon={skills[skill].icon}
+                    label={skills[skill].label}
                   />
                 ))}
               </div>

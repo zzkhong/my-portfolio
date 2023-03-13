@@ -1,95 +1,37 @@
-.wrapper {
-  @apply flex flex-row items-center relative;
-  min-height: 24rem;
+.logo {
+  @apply overflow-hidden rounded-full;
 }
 
-.timeline {
-  @apply bg-blue w-screen relative;
-  height: 1px;
+.icon {
+  @apply cursor-pointer transition duration-300 hover:opacity-80;
 }
 
-.container {
-  @apply absolute left-0 right-0 h-full;
+.date {
+  @apply text-white;
 }
 
-.instances {
-  @apply flex flex-row items-center overflow-scroll scrollbar-hide h-full w-full pl-16 mx-auto;
+.header {
+  @apply flex flex-row items-baseline;
 }
 
-.instance {
-  @apply flex flex-col items-center justify-center select-none;
-  min-width: 14rem;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  -webkit-tap-highlight-color: transparent;
-}
-
-.instance:last-child {
-  @apply mr-16;
-}
-
-@screen md {
-  .instances {
-    @apply pl-40;
-  }
-
-  .instance:last-child {
-    @apply mr-40;
-  }
-
-  .instance {
-    min-width: 20rem;
-  }
-}
-
-@screen lg {
-  .instances {
-    @apply pl-60;
-  }
-
-  .instance:last-child {
-    @apply mr-60;
-  }
-}
-
-@screen xl {
-  .instances {
-    @apply pl-72;
-  }
-
-  .instance:last-child {
-    @apply mr-72;
-  }
-}
-
-@screen 2xl {
-  .instances {
-    padding-left: 30%;
-  }
-
-  .instance:last-child {
-    margin-right: 30%;
-  }
-}
-
-.position {
-  @apply -mb-4 flex flex-col items-center justify-center;
-}
-
-.indicator {
-  @apply w-4 h-4 bg-blue rounded-full animate-ping mb-2;
-}
-
-.image {
-  @apply w-32 h-32 mb-10 rounded-full overflow-hidden shadow-lg cursor-pointer relative;
+.company {
+  @apply text-xs pl-2;
 }
 
 .title {
-  @apply text-lg font-semibold text-center mt-2;
-  max-width: 12rem;
-  height: 8rem;
+  @apply text-xl font-bold underline;
 }
 
-.year {
-  @apply font-bold mt-4;
-  letter-spacing: 0.2rem;
+.list {
+  @apply py-4 pr-4;
+}
+
+.listItem {
+  @apply text-white text-sm;
+}
+
+@screen ll {
+  .date {
+    @apply text-gray-600;
+  }
 }
