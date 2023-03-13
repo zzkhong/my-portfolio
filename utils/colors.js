@@ -1,9 +1,9 @@
 const colors = {
-  WHITE: "#FFF",
-  BLUE: "rgb(33, 150, 243)",
+  WHITE: "#FFFFFF",
+  BLUE: "#0099FF",
   GREEN: "#74B72E",
-  GREY_600: "rgb(55, 65, 81)",
-  GREY_300: "rgb(209, 213, 219)",
+  GREY_600: "#333333",
+  GREY_300: "#CCCCCC",
 };
 
 export default colors;

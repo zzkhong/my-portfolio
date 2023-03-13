@@ -10,6 +10,7 @@ import Footer from "components/Footer";
 import Bubble from "components/Bubble";
 import Portfolio from "components/Portfolio";
 import Timeline from "components/Timeline";
+import { Wave } from "components/Haikei";
 
 import useWindowDimensions from "hooks/useWindowDimensions";
 import skills from "data/skills";
@@ -66,6 +67,8 @@ const Home: NextPage = () => {
       </Head>
 
       <LazyMotion features={domAnimation}>
+        <Wave />
+
         <main className={styles.main}>
           {/* Introduction */}
           <Parallax
