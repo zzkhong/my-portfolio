@@ -13,7 +13,7 @@ const Bubble: React.FC<BubbleProps> = ({ icon, label }) => {
     <div className={styles.bubble}>
       {icon && (
         <div className={styles.icon}>
-          <Image src={icon} alt="" />
+          <Image className={styles.image} src={icon} alt="" />
         </div>
       )}
       <span className={styles.label}>{label}</span>

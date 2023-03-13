@@ -11,15 +11,25 @@
 }
 
 .header {
-  @apply flex flex-row items-baseline;
+  @apply flex flex-col items-baseline;
 }
 
 .company {
-  @apply text-xs pl-2;
+  @apply text-xs pl-0 pt-2;
 }
 
 .title {
   @apply text-xl font-bold underline;
+}
+
+@screen sm {
+  .header {
+    @apply flex-row;
+  }
+
+  .company {
+    @apply pl-2 pt-0;
+  }
 }
 
 .list {
