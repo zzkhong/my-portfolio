@@ -80,7 +80,7 @@ const Timeline: React.FC = () => {
           }
         >
           <div className={styles.header}>
-            <span className={styles.title}>{data.title}</span>,
+            <span className={styles.title}>{data.title}</span>
             <span className={styles.company}>
               {companies[data.company].name}
             </span>
