@@ -39,7 +39,7 @@ const experience: Experience[] = [
     title: "User Experience, Software Engineer",
     link: "https://www.sony.com.my/",
     achievement: [
-      "Launched TV Menu Screen which supports a variety of broadcasting applications (YouTube, Netflix, Amazon, All4, etc.)",
+      "Launched TV Home UI which supports a variety of broadcasting applications (YouTube, Netflix, Amazon, All4, etc.)",
       "Perform reverse engineering on Android TV application to sync TV video playback for marketing demo purposes",
       "Maintaining and performing QA on ReactJS Application ~  Linux Freeview (UK Broadcasting Platform)",
     ],
