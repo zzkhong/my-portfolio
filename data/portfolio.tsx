@@ -1,24 +1,25 @@
 const portfolio: Portfolio[] = [
   {
     key: "portfolio",
-    image: "/portfolio/me.webp",
+    image: "/portfolio/me.png",
     description: "My Portfolio, the current website you looking at",
     title: "My Porfolio",
     skills: ["nextjs", "tailwind", "typescript"],
     link: undefined,
   },
-  // {
-  //   key: "onezoapp",
-  //   image: me,
-  //   title: "OneZo APP",
-  //   skills: ["reactnative", "azure", "typescript"],
-  //   link: "",
-  // },
+  {
+    key: "onezoapp",
+    image: "/portfolio/onezo.png",
+    description: "Bubble Tea Mobile App, unfortunately not launching anymore",
+    title: "OneZo APP",
+    skills: ["reactnative", "azure", "typescript"],
+    link: "https://install.appcenter.ms/orgs/Onezo/apps/Onezo-Android/releases/14",
+  },
   {
     key: "paywatchweb",
     image: "/portfolio/paywatch.png",
     description:
-      "The website for introducing and promoting the Earned Waged Access solution",
+      "The promotional website for introducing and promoting the Earned Waged Access solution",
     title: "Paywatch Global Webpage",
     association: "paywatch",
     skills: ["gatsby", "tailwind", "javascript"],
@@ -27,7 +28,7 @@ const portfolio: Portfolio[] = [
   {
     key: "paywatchapp",
     image: "/portfolio/paywatch.png",
-    description: "Providing the Earned Waged Access solution in mobile app",
+    description: "Mobile App that provide Earned Waged Access solution",
     title: "Paywatch APP",
     association: "paywatch",
     skills: ["reactnative", "azure", "typescript"],
@@ -36,7 +37,7 @@ const portfolio: Portfolio[] = [
   {
     key: "daikin",
     image: "/portfolio/daikin.webp",
-    description: "IoT solution for air-conditioning in mobile app",
+    description: "IoT solution for air-conditioning",
     title: "GO Daikin",
     association: "upstack",
     skills: ["reactnative", "circleci", "javascript"],
@@ -45,7 +46,7 @@ const portfolio: Portfolio[] = [
   {
     key: "acson",
     image: "/portfolio/acson.webp",
-    description: "IoT solution for air-conditioning in mobile app",
+    description: "IoT solution for air-conditioning",
     title: "MY Acson",
     association: "upstack",
     skills: ["reactnative", "circleci", "javascript"],
@@ -81,8 +82,7 @@ const portfolio: Portfolio[] = [
   {
     key: "attendink",
     image: "/portfolio/attendink.webp",
-    description:
-      "Intern project, attendance taking native android mobile application",
+    description: "Intern project, attendance taking native android app",
     title: "AttendInk",
     association: "werebits",
     skills: ["android"],

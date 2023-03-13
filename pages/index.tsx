@@ -4,6 +4,7 @@ import type { NextPage } from "next";
 import { Parallax } from "react-scroll-parallax";
 import { LazyMotion, domAnimation, m } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 import Footer from "components/Footer";
 import Bubble from "components/Bubble";
@@ -12,7 +13,7 @@ import Timeline from "components/Timeline";
 
 import useWindowDimensions from "hooks/useWindowDimensions";
 import skills from "data/skills";
-import { HACKATHON, LINKEDIN } from "data/links";
+import feed from "data/feed";
 
 import styles from "styles/index.module.css";
 
@@ -75,67 +76,41 @@ const Home: NextPage = () => {
             <m.h1 variants={titleVariant} initial="hidden" animate="visible">
               Hello, I&apos;m <span className={styles.accent}>CK Chin</span>
             </m.h1>
-            <div className={styles.subtitleRow}>
-              <m.span
-                variants={rightVariant}
-                initial="hidden"
-                animate="visible"
-              >{`Malaysian, ${new Date().getFullYear() - 1996} y/o`}</m.span>
-
-              {/* FEED */}
-              <m.a
-                variants={upVariant}
-                initial="hidden"
-                animate="visible"
-                href={LINKEDIN}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.feed}
-              >
-                <Image
-                  width={24}
-                  height={24}
-                  src="/linkedin.webp"
-                  alt="linkedin"
-                />
-              </m.a>
-              <m.a
-                variants={upVariant}
-                initial="hidden"
-                animate="visible"
-                href={HACKATHON}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.feed}
-              >
-                <Image
-                  width={24}
-                  height={24}
-                  src="/rssfeed.webp"
-                  alt="rssfeed"
-                />
-              </m.a>
-              {/* FEED */}
+            <div className={styles.headerRow}>
+              {feed.map((f) => (
+                <m.a
+                  key={f.key}
+                  variants={upVariant}
+                  initial="hidden"
+                  animate="visible"
+                  href={f.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.feed}
+                >
+                  <Image width={24} height={24} src={f.icon} alt={f.key} />
+                </m.a>
+              ))}
             </div>
 
             <m.p variants={rightVariant} initial="hidden" animate="visible">
               I&apos;m an experienced{" "}
               <b>
-                <u>Full Stack developer</u>
-              </b>{" "}
-              currently working in <b>Paywatch</b>, specialize in{" "}
-              <b>Mobile Development</b> and <b>Web Development</b>.
+                <u>Full Stack Developer</u>
+              </b>
+              <br />
+              Specialize in <b>Web & Mobile Development</b>.
             </m.p>
 
-            <m.a
-              variants={rightVariant}
-              initial="hidden"
-              animate="visible"
-              target="_blank"
-              href="/resume/resume.pdf"
-            >
-              Download My Resume here
-            </m.a>
+            <m.div variants={rightVariant} initial="hidden" animate="visible">
+              <Link
+                className={styles.resume}
+                target="_blank"
+                href="/resume/resume.pdf"
+              >
+                Get My Resume here
+              </Link>
+            </m.div>
 
             <m.div variants={upVariant} initial="hidden" animate="visible">
               <h2>Skills</h2>

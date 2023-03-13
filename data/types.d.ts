@@ -4,6 +4,12 @@ interface Skill {
   label: string;
 }
 
+interface Feed {
+  key: string;
+  url: string;
+  icon: any;
+}
+
 interface Experience {
   period: string;
   title: string;

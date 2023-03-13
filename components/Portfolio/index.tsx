@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Button, Modal } from "@mantine/core";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 import companies from "data/companies";
 import portfolio from "data/portfolio";
@@ -13,9 +14,11 @@ const Portfolio: React.FC = () => {
   const [current, setCurrent] = React.useState<Portfolio>();
   const [open, setOpen] = React.useState(false);
 
-  const filteredSkills = React.useMemo(() => {
-    return skills.filter((skill) => current?.skills.includes(skill.key));
-  }, [current]);
+  const skillKeys = Object.keys(skills);
+  const filteredSkills = React.useMemo(
+    () => skillKeys.filter((s) => current?.skills.includes(s)),
+    [current, skillKeys]
+  );
 
   const handleOpen = React.useCallback(
     (selected: Portfolio) => {
@@ -64,15 +67,19 @@ const Portfolio: React.FC = () => {
 
         <b>Development Tools</b>
         <div className={styles.modalSkills}>
-          {filteredSkills.map((data) => (
-            <Bubble key={data.key} label={data.label} icon={data.icon} />
+          {filteredSkills.map((s) => (
+            <Bubble
+              key={skills[s].key}
+              label={skills[s].label}
+              icon={skills[s].icon}
+            />
           ))}
         </div>
         <br />
 
         <Button
           disabled={current?.link === undefined}
-          className={current?.link === undefined ? styles.disabled : ''}
+          className={current?.link === undefined ? styles.disabled : ""}
           fullWidth
           component="a"
           target="_blank"

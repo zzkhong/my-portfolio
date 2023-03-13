@@ -61,7 +61,9 @@ const Timeline: React.FC = () => {
 
           <List className={styles.list} spacing="sm">
             {data.achievement.map((item) => (
-              <List.Item className={styles.listItem}>{item}</List.Item>
+              <List.Item key={item} className={styles.listItem}>
+                {item}
+              </List.Item>
             ))}
           </List>
         </VerticalTimelineElement>

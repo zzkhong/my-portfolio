@@ -16,7 +16,7 @@
 }
 
 .modalSkills {
-  @apply flex flex-row flex-wrap;
+  @apply flex flex-row mt-2 flex-wrap;
 }
 
 .modalImage {

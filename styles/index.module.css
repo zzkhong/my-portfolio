@@ -17,16 +17,20 @@
   @apply text-lg max-w-xl select-none;
 }
 
-.subtitleRow {
-  @apply flex items-center;
+.headerRow {
+  @apply flex flex-row items-center;
 }
 
 .feed {
-  @apply animate-bounce ml-4;
+  @apply animate-bounce pr-4;
 }
 
 .accent {
   @apply transition duration-300 text-blue hover:animate-pulse;
+}
+
+.resume {
+  @apply no-underline text-gray-600 font-bold hover:opacity-80;
 }
 
 .banner_intro {
