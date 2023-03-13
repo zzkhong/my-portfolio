@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -22,23 +22,50 @@ const jsStyles = {
     background: colors.BLUE,
     color: colors.WHITE,
   },
+  instanceIntern: {
+    background: colors.GREEN,
+    color: colors.WHITE,
+  },
   arrow: {
     borderRight: `7px solid ${colors.GREY_600}`,
   },
   arrowFirst: {
     borderRight: `7px solid ${colors.BLUE}`,
   },
+  arrowIntern: {
+    borderRight: `7px solid ${colors.GREEN}`,
+  },
 };
 
 const Timeline: React.FC = () => {
+  const contentArrowStyle = (i: number): React.CSSProperties => {
+    if (i === 0) {
+      return jsStyles.arrowFirst;
+    } else if (i === experience.length - 1) {
+      return jsStyles.arrowIntern;
+    } else {
+      return jsStyles.arrow;
+    }
+  };
+
+  const contentStyle = (i: number): React.CSSProperties => {
+    if (i === 0) {
+      return jsStyles.instanceFirst;
+    } else if (i === experience.length - 1) {
+      return jsStyles.instanceIntern;
+    } else {
+      return jsStyles.instance;
+    }
+  };
+
   return (
     <VerticalTimeline lineColor={colors.BLUE}>
       {experience.map((data, i) => (
         <VerticalTimelineElement
           key={data.company}
           iconOnClick={() => window.open(data.link)}
-          contentStyle={i === 0 ? jsStyles.instanceFirst : jsStyles.instance}
-          contentArrowStyle={i === 0 ? jsStyles.arrowFirst : jsStyles.arrow}
+          contentStyle={contentStyle(i)}
+          contentArrowStyle={contentArrowStyle(i)}
           className="vertical-timeline-element--work"
           iconClassName={styles.icon}
           date={data.period}

@@ -1,7 +1,6 @@
 import React from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { Button, Modal } from "@mantine/core";
-import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 import companies from "data/companies";
 import portfolio from "data/portfolio";
