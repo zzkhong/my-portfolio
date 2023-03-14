@@ -91,7 +91,7 @@ const Portfolio: React.FC = () => {
 
       <div className={styles.container}>
         {portfolio.map((data) => (
-          <a
+          <div
             key={data.key}
             className={styles.portfolio}
             onClick={() => handleOpen(data)}
@@ -99,7 +99,7 @@ const Portfolio: React.FC = () => {
             <div className={styles.image}>
               <Image layout="fill" src={data.image} alt={data.title} />
             </div>
-          </a>
+          </div>
         ))}
       </div>
     </>

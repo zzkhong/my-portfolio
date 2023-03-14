@@ -5,11 +5,9 @@ import { Parallax } from "react-scroll-parallax";
 import { LazyMotion, domAnimation, m } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 
-import Footer from "components/Footer";
 import Bubble from "components/Bubble";
-import Portfolio from "components/Portfolio";
-import Timeline from "components/Timeline";
 import { Wave } from "components/Haikei";
 
 import useWindowDimensions from "hooks/useWindowDimensions";
@@ -17,6 +15,10 @@ import skills from "data/skills";
 import feed from "data/feed";
 
 import styles from "styles/index.module.css";
+
+const DynamicTimeline = dynamic(() => import("components/Timeline"));
+const DynamicPortfolio = dynamic(() => import("components/Portfolio"));
+const DynamicFooter = dynamic(() => import("components/Footer"));
 
 const Home: NextPage = () => {
   const { height } = useWindowDimensions();
@@ -144,7 +146,7 @@ const Home: NextPage = () => {
               My Career
             </m.h1>
 
-            <Timeline />
+            <DynamicTimeline />
           </Parallax>
 
           {/* My Portfolio */}
@@ -161,13 +163,13 @@ const Home: NextPage = () => {
               viewport={{ once: true }}
               whileInView="visible"
             >
-              <Portfolio />
+              <DynamicPortfolio />
             </m.div>
           </Parallax>
         </main>
       </LazyMotion>
 
-      <Footer />
+      <DynamicFooter />
     </div>
   );
 };
