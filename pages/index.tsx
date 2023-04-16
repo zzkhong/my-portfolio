@@ -11,8 +11,6 @@ import Bubble from "components/Bubble";
 import { Wave } from "components/Haikei";
 
 import useWindowDimensions from "hooks/useWindowDimensions";
-import skills from "data/skills";
-import feed from "data/feed";
 
 import styles from "styles/index.module.css";
 
@@ -20,7 +18,21 @@ const DynamicTimeline = dynamic(() => import("components/Timeline"));
 const DynamicPortfolio = dynamic(() => import("components/Portfolio"));
 const DynamicFooter = dynamic(() => import("components/Footer"));
 
-const Home: NextPage = () => {
+interface HomeProps {
+  feeds: Feed[];
+  skills: Record<string, Skill>;
+  companies: Record<string, Company>;
+  experiences: Experience[];
+  portfolios: Portfolio[];
+}
+
+const Home: NextPage<HomeProps> = ({
+  feeds,
+  skills,
+  companies,
+  experiences,
+  portfolios,
+}) => {
   const { height } = useWindowDimensions();
   const parallaxSpeed = height && height > 700 ? 15 : 7.5;
 
@@ -82,7 +94,7 @@ const Home: NextPage = () => {
               Hello, I&apos;m <span className={styles.accent}>CK Chin</span>
             </m.h1>
             <div className={styles.headerRow}>
-              {feed.map((f) => (
+              {feeds.map((f) => (
                 <m.a
                   key={f.key}
                   variants={upVariant}
@@ -146,7 +158,7 @@ const Home: NextPage = () => {
               My Career
             </m.h1>
 
-            <DynamicTimeline />
+            <DynamicTimeline experiences={experiences} companies={companies} />
           </Parallax>
 
           {/* My Portfolio */}
@@ -163,7 +175,11 @@ const Home: NextPage = () => {
               viewport={{ once: true }}
               whileInView="visible"
             >
-              <DynamicPortfolio />
+              <DynamicPortfolio
+                companies={companies}
+                portfolios={portfolios}
+                skills={skills}
+              />
             </m.div>
           </Parallax>
         </main>
@@ -173,5 +189,28 @@ const Home: NextPage = () => {
     </div>
   );
 };
+
+export async function getStaticProps() {
+  // @ts-ignore
+  const { feeds } = await import("/data/feeds.json");
+  // @ts-ignore
+  const { skills } = await import("/data/skills.json");
+  // @ts-ignore
+  const { companies } = await import("/data/companies.json");
+  // @ts-ignore
+  const { experiences } = await import("/data/experiences.json");
+  // @ts-ignore
+  const { portfolios } = await import("/data/portfolios.json");
+
+  return {
+    props: {
+      feeds,
+      skills,
+      companies,
+      experiences,
+      portfolios,
+    },
+  };
+}
 
 export default Home;

@@ -2,14 +2,20 @@ import React from "react";
 import Image from "next/legacy/image";
 import { Button, Modal } from "@mantine/core";
 
-import companies from "data/companies";
-import portfolio from "data/portfolio";
-import skills from "data/skills";
-
 import styles from "./index.module.css";
 import Bubble from "components/Bubble";
 
-const Portfolio: React.FC = () => {
+interface PortfolioProp {
+  companies: Record<string, Company>;
+  portfolios: Portfolio[];
+  skills: Record<string, Skill>;
+}
+
+const Portfolio: React.FC<PortfolioProp> = ({
+  companies,
+  portfolios,
+  skills,
+}) => {
   const [current, setCurrent] = React.useState<Portfolio>();
   const [open, setOpen] = React.useState(false);
 
@@ -90,7 +96,7 @@ const Portfolio: React.FC = () => {
       </Modal>
 
       <div className={styles.container}>
-        {portfolio.map((data) => (
+        {portfolios.map((data) => (
           <div
             key={data.key}
             className={styles.portfolio}

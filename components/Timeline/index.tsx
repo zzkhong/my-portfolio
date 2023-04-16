@@ -7,9 +7,6 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { List } from "@mantine/core";
 
-import experience from "data/experience";
-import companies from "data/companies";
-
 import colors from "utils/colors";
 import styles from "./index.module.css";
 
@@ -37,11 +34,16 @@ const jsStyles = {
   },
 };
 
-const Timeline: React.FC = () => {
+interface TimelineProp {
+  experiences: Experience[];
+  companies: Record<string, Company>;
+}
+
+const Timeline: React.FC<TimelineProp> = ({ experiences, companies }) => {
   const contentArrowStyle = (i: number): React.CSSProperties => {
     if (i === 0) {
       return jsStyles.arrowFirst;
-    } else if (i === experience.length - 1) {
+    } else if (i === experiences.length - 1) {
       return jsStyles.arrowIntern;
     } else {
       return jsStyles.arrow;
@@ -51,7 +53,7 @@ const Timeline: React.FC = () => {
   const contentStyle = (i: number): React.CSSProperties => {
     if (i === 0) {
       return jsStyles.instanceFirst;
-    } else if (i === experience.length - 1) {
+    } else if (i === experiences.length - 1) {
       return jsStyles.instanceIntern;
     } else {
       return jsStyles.instance;
@@ -60,7 +62,7 @@ const Timeline: React.FC = () => {
 
   return (
     <VerticalTimeline lineColor={colors.BLUE}>
-      {experience.map((data, i) => (
+      {experiences.map((data, i) => (
         <VerticalTimelineElement
           key={data.company}
           iconOnClick={() => window.open(data.link)}
