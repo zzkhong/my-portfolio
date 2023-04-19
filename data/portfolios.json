@@ -5,7 +5,8 @@
       "image": "/portfolio/me.png",
       "description": "My Portfolio, the current website you looking at",
       "title": "My Porfolio",
-      "skills": ["nextjs", "tailwind", "typescript"]
+      "skills": ["nextjs", "tailwind", "typescript"],
+      "action": "You're looking at it"
     },
     {
       "key": "onezoapp",
@@ -13,7 +14,8 @@
       "description": "Bubble Tea Mobile App, unfortunately not launching anymore",
       "title": "OneZo APP",
       "skills": ["reactnative", "azure", "typescript"],
-      "link": "/video/demo-onezo.mp4"
+      "link": "/video/demo-onezo.mp4",
+      "action": "View Demo"
     },
     {
       "key": "paywatchweb",
@@ -74,7 +76,8 @@
       "title": "SONY Linux FreeView",
       "association": "sony",
       "skills": ["react", "javascript"],
-      "link": "https://www.freeview.co.uk/"
+      "link": "https://www.freeview.co.uk/",
+      "action": "View Info"
     },
     {
       "key": "attendink",

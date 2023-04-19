@@ -91,7 +91,7 @@ const Portfolio: React.FC<PortfolioProp> = ({
           rel="noopener noreferrer"
           href={current?.link}
         >
-          View Project
+          {current?.action || "View Project"}
         </Button>
       </Modal>
 

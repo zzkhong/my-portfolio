@@ -32,4 +32,5 @@ interface Portfolio {
   association?: string;
   skills: string[];
   link?: string;
+  action?: string;
 }
