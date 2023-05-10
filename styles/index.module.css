@@ -1,9 +1,5 @@
-.container {
-  @apply pt-8;
-}
-
 .main {
-  @apply flex flex-col m-0 min-h-screen text-gray-700;
+  @apply flex flex-col m-0 min-h-screen text-gray-700 pt-8;
 }
 
 .main h1 {
@@ -26,7 +22,7 @@
 }
 
 .accent {
-  @apply transition duration-300 text-blue;
+  @apply transition duration-300 text-primary;
 }
 
 .resume {
@@ -62,7 +58,7 @@
 }
 
 @screen md {
-  .container {
+  .main {
     @apply py-0;
   }
 

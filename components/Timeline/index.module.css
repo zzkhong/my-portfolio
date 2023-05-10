@@ -7,7 +7,7 @@
 }
 
 .date {
-  @apply text-white;
+  @apply text-content;
 }
 
 .header {
@@ -37,7 +37,7 @@
 }
 
 .listItem {
-  @apply text-white text-sm;
+  @apply text-content text-sm;
 }
 
 @screen ll {
