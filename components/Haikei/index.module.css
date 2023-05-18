@@ -6,12 +6,12 @@
 }
 
 .blob {
-  @apply absolute -z-20 -left-80 top-32;
+  @apply absolute -z-20 w-full hidden;
 }
 
 @screen md {
   .blob {
-    @apply -left-24 top-48;
+    @apply -left-24 top-48 block;
   }
 }
 
