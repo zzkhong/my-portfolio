@@ -65,6 +65,16 @@ export default function App(props: AppProps) {
           <Component {...pageProps} />
         </ParallaxProvider>
       </MantineProvider>
+
+      <Script id="kutejs">
+        {`const tween = KUTE.fromTo(
+          '#blob1',
+          { path: '#blob1' },
+          { path: '#blob2' },
+          { repeat: 999, duration: 3000, yoyo: true }
+      )
+        tween.start()`}
+      </Script>
     </>
   );
 }

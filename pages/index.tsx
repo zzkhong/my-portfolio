@@ -8,7 +8,7 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 
 import Bubble from "components/Bubble";
-import { Wave } from "components/Haikei";
+import { Blob, Wave } from "components/Haikei";
 
 import useWindowDimensions from "hooks/useWindowDimensions";
 
@@ -181,6 +181,8 @@ const Home: NextPage<HomeProps> = ({
                 skills={skills}
               />
             </m.div>
+
+            <Blob />
           </Parallax>
         </main>
       </LazyMotion>

@@ -1,6 +1,22 @@
 .wave {
   @apply absolute w-full h-screen bg-no-repeat bg-center bg-cover -z-50;
   aspect-ratio: 960/540;
-  background-image: linear-gradient(to bottom, transparent, 95%, #ffffff),
+  background-image: linear-gradient(to bottom, transparent, 90%, #fff),
     url("./svg/wave.svg");
+}
+
+.blob {
+  @apply absolute -z-20 -left-80 top-32;
+}
+
+@screen md {
+  .blob {
+    @apply -left-24 top-48;
+  }
+}
+
+@screen lg {
+  .blob {
+    @apply -left-10 top-60;
+  }
 }

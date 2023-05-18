@@ -1,5 +1,6 @@
 import { createGetInitialProps } from "@mantine/next";
 import Document, { Head, Html, Main, NextScript } from "next/document";
+import Script from "next/script";
 
 const getInitialProps = createGetInitialProps();
 
@@ -15,6 +16,11 @@ export default class _Document extends Document {
             rel="stylesheet"
           />
           <link rel="shortcut icon" href="/favicon.ico" />
+
+          <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"
+          />
         </Head>
         <body>
           <Main />

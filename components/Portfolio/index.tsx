@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/legacy/image";
+import Bubble from "components/Bubble";
 import { Button, Modal } from "@mantine/core";
 
 import styles from "./index.module.css";
-import Bubble from "components/Bubble";
 
 interface PortfolioProp {
   companies: Record<string, Company>;
@@ -96,17 +96,19 @@ const Portfolio: React.FC<PortfolioProp> = ({
       </Modal>
 
       <div className={styles.container}>
-        {portfolios.map((data) => (
-          <div
-            key={data.key}
-            className={styles.portfolio}
-            onClick={() => handleOpen(data)}
-          >
-            <div className={styles.image}>
-              <Image layout="fill" src={data.image} alt={data.title} />
+        <>
+          {portfolios.map((data) => (
+            <div
+              key={data.key}
+              className={styles.portfolio}
+              onClick={() => handleOpen(data)}
+            >
+              <div className={styles.image}>
+                <Image layout="fill" src={data.image} alt={data.title} />
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </>
       </div>
     </>
   );
