@@ -19,7 +19,7 @@ const Wave: React.FC = () => {
       variants={upVariant}
       initial="hidden"
       animate="visible"
-    ></m.div>
+    />
   );
 };
 

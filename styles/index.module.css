@@ -1,5 +1,14 @@
 .main {
   @apply flex flex-col m-0 min-h-screen text-gray-700 pt-8;
+
+  background-image: linear-gradient(
+    125deg,
+    transparent,
+    #ffffff60,
+    transparent
+  );
+  background-size: 400%;
+  animation: bgmove 3s infinite;
 }
 
 .main h1 {
@@ -88,5 +97,17 @@
 
   .portfolio {
     @apply justify-start;
+  }
+}
+
+@keyframes bgmove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }

@@ -1,5 +1,6 @@
 .wave {
   @apply absolute w-full h-screen bg-no-repeat bg-center bg-cover -z-50;
   aspect-ratio: 960/540;
-  background-image: url("./svg/wave.svg");
+  background-image: linear-gradient(to bottom, transparent, 95%, #ffffff),
+    url("./svg/wave.svg");
 }
