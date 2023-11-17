@@ -1,8 +1,15 @@
 {
   "experiences": [
     {
+      "company": "gxbank",
+      "period": "Oct 2023 - Present",
+      "title": "Senior Software Engineer",
+      "link": "https://gxbank.my/",
+      "achievement": ["In Progress"]
+    },
+    {
       "company": "binance",
-      "period": "Nov 2022 - Present",
+      "period": "Nov 2022 - July 2023",
       "title": "Web Engineer",
       "link": "https://www.binance.com/en",
       "achievement": [

@@ -24,6 +24,11 @@
       "key": "binance",
       "image": "/company/binance.png",
       "name": "Binance"
+    },
+    "gxbank": {
+      "key": "gxbank",
+      "image": "/company/gxbank.png",
+      "name": "GXBank"
     }
   }
 }
