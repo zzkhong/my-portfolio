@@ -13,9 +13,8 @@
       "title": "Web Engineer",
       "link": "https://www.binance.com/en",
       "achievement": [
-        "Worked on region expansion on Binance Program",
-        "Improve code quality and refactoring of the repository(TypeScript, React Query)",
-        "Migration of framework which improves build speeds and enhancing the workflow"
+        "Involved in region expansion on Binance Card Program",
+        "Development of Binance Merchant Platform for web app and web portal"
       ]
     },
     {
@@ -59,7 +58,7 @@
       "link": "https://werebits.com/",
       "achievement": [
         "Launched an attendance taking native android app (AttendInk)",
-        "Built a web form application system using Laravel"
+        "Built Laravel web form application system"
       ]
     }
   ]
